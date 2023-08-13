@@ -1,0 +1,23 @@
+{
+  "name": "system-interface",
+  "version": "1.0.0",
+  "description": "The interface between CPET systems and the service.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/EnhancedCPET/system-interface.git"
+  },
+  "author": "Apurva Shah shahh.apurva@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EnhancedCPET/system-interface/issues"
+  },
+  "homepage": "https://github.com/EnhancedCPET/system-interface#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.10",
+    "typescript": "^5.1.6"
+  }
+}
