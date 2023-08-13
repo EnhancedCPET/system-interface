@@ -5,12 +5,17 @@
   "main": "index.ts",
   "scripts": {
     "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}'",
-    "format": "prettier --write 'src/**/*.{js,ts,jsx,tsx}'",
+    "lint:fix": "npm run lint -- --fix 'src/**/*.{js,ts,jsx,tsx}'",
+    "prettier": "npx prettier --check 'src/**/*.{js,ts,jsx,tsx}'",
+    "prettier:fix": "npm run prettier -- --write 'src/**/*.{js,ts,jsx,tsx}'",
     "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": [
+        "npm run lint",
+        "npm run prettier"
+      ]
     }
   },
   "repository": {
@@ -25,6 +30,7 @@
   "homepage": "https://github.com/EnhancedCPET/system-interface#readme",
   "devDependencies": {
     "@types/node": "^20.4.10",
+    "@types/xlsx": "^0.0.36",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
@@ -36,5 +42,8 @@
     "husky": "^8.0.0",
     "prettier": "^3.0.1",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }
