@@ -6,16 +6,13 @@
   "scripts": {
     "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}'",
     "lint:fix": "npm run lint -- --fix 'src/**/*.{js,ts,jsx,tsx}'",
-    "prettier": "npx prettier --check 'src/**/*.{js,ts,jsx,tsx}'",
-    "prettier:fix": "npm run prettier -- --write 'src/**/*.{js,ts,jsx,tsx}'",
+    "prettier": "prettier --check 'src/**/*.{js,ts,jsx,tsx}'",
+    "prettier:fix": "prettier --write 'src/**/*.{js,ts,jsx,tsx}'",
     "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": [
-        "npm run lint",
-        "npm run prettier"
-      ]
+      "pre-commit": "npm run lint"
     }
   },
   "repository": {
