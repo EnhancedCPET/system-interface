@@ -1,5 +1,5 @@
 {
-  "name": "system-interface",
+  "name": "@enhancedcpet/system-interface",
   "version": "1.0.0",
   "description": "The interface between CPET systems and the service.",
   "main": "dist/index",
