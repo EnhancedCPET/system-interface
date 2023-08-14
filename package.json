@@ -2,8 +2,16 @@
   "name": "system-interface",
   "version": "1.0.0",
   "description": "The interface between CPET systems and the service.",
-  "main": "index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
+    "build:cjs": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
     "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}'",
     "lint:fix": "npm run lint -- --fix 'src/**/*.{js,ts,jsx,tsx}'",
     "prettier": "prettier --check 'src/**/*.{js,ts,jsx,tsx}'",
