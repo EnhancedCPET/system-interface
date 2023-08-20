@@ -1,5 +1,5 @@
 .eslintrc.js
 dist
 node_modules
-babel.config.js
 tests
+jest.config.js
