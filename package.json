@@ -6,6 +6,7 @@
   "types": "dist/index",
   "scripts": {
     "build": "tsc",
+    "test": "jest",
     "lint": "eslint 'src/**/*.{js,ts,jsx,tsx}'",
     "lint:fix": "npm run lint -- --fix 'src/**/*.{js,ts,jsx,tsx}'",
     "prettier": "prettier --check 'src/**/*.{js,ts,jsx,tsx}'",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/EnhancedCPET/system-interface#readme",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.22.5",
     "@types/node": "^20.4.10",
     "@types/xlsx": "^0.0.36",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
